@@ -1,27 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Me joindre - Matthieu B. P.</title>
-    <link rel="styles" href="styles.css">
+    <title>Portfolio de Matthieu B. P.</title>
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
-<!-- Boutons de l'en-tête -->
-<div class="header">
-    <div class="centrer">
-        <button onclick="document.location='projets.html'">Projets</button>
-        <button onclick="document.location='art.html'">Mon art</button>
-        <button onclick="document.location='index.html'">Accueil</button>
+    <header>
+
+        <img src="signature.png" alt="mon_logo" width="100px" height="50px">
+
+        <nav>
+            <a href="index.html" class="clickable"><strong>ACCUEIL</strong></a>
+            <a href="about.html" class="clickable">À propos</a>
+            <a href="projets.html" class="clickable">Mes projets</a>
+            <a href="art.html" class="clickable">Mon art</a>
+            <a href="contact.html" class="clickable">Me contacter</a>
+        </nav>
+
+    </header>
+
+    <div class="banner">
+
+        <div class="main_title">
+            Matthieu Bélanger Poulin
+        </div>
+
     </div>
-</div>
 
+    <section class="contact">
 
-<!-- Me joindre > Comment me contacter -->
-<div class="contenant">
-    <h1>Comment me contacter</h1>
-    <a href="https://www.instagram.com/rom4ntiscor/">Ma page Instagram</a>
-</div>
+        <div class="container">
+
+            <div class="sliding_element">
+
+                <h1>VOUS SOUHAITEZ ME CONTACTER?</h1>
+
+                <p>
+                    Si vous voulez devenir un de mes <b>collaborateurs</b>, ou vous
+                    souhaitez me faire une offre quelconque, veuillez envoyer un courriel
+                    à mon adresse professionelle. <b>Sinon, remplissez le formulaire 
+                    ci-dessous!</b>
+                </p>
+
+            </div>
+
+            <form>
+
+                <label for="nom">NOM COMPLET : </label><br>
+                <input type="text" id="nom" name="nom"><br>
+
+                <label for="email">COURRIEL : </label><br>
+                <input type="email" id="email" name="email"><br>
+
+                <label for="sujet">SUJET :</label><br>
+                <input type="text" id="sujet" name="sujet"><br>
+                
+                <label for="contenu">CONTENU :</label><br>
+                <textarea type="text" id="contenu" name="contenu"></textarea><br>
+
+                <p>
+                    Envoyez vos informations ici!
+                </p>
+                <input type="submit" value="ENVOYER" class="submit_button">
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <footer>
+            2023 © Matthieu B. P.
+
+            <div class="socialmedia"> 
+
+                <div class="reseau">
+                    <img src="instagram.png">
+                    <a href="https://www.instagram.com/rom4ntiscor/" class="clickable">INSTAGRAM</a>
+                </div>
+
+                <div class="reseau">
+                    <img src="github.jpg">
+                    <a href="https://www.instagram.com/rom4ntiscor/" class="clickable">GITHUB</a>
+                </div>
+
+                <div class="reseau">
+                    <img src="twitter.jpg">
+                    <a href="https://www.instagram.com/rom4ntiscor/" class="clickable">TWITTER</a>
+                </div>
+
+            </div>
+
+    </footer>
+
 </body>
+</html>
