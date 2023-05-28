@@ -1,19 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* FONTS IMPORTÉS */
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* FONTS IMPORTÉS */
 
-*
+/**
 { 
     outline: 1px solid red;
     outline-offset: -1px;
-}
+}*/
+
+/* ORGANISATION
+    Mon CSS est organisé de la sorte :
+
+        1. Éléments par défaut (GÉNÉRAL)
+        2. Éléments de l'en-tête
+        3. Éléments de navigation
+        4. Éléments animés
+        5. Éléments de boîtes
+            • Boites des diverses pages du site
+            • Boites par défaut
+        6. Éléments de formulaire
+        7. Éléments de texte (titres, listes, etc.)
+        8. Éléments de pied-de-page
+    
+    Chaque section est divisée en sous-sections, basées
+    sur les types de propriétés utilisées
+
+        1. Apparence
+        2. Dimension
+        3. Texte
+
+    Voilà! */
   
-/* FOND */
+/* GÉNÉRAL */
     body
     {
         /* APPARENCE */
             background-color: #0e0e0e;
         /* APPARENCE */
+
+        /* TEXTE */
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: larger;
+            font-weight: lighter;
+            text-align: justify;
+        /* TEXTE */
     }
-/* FOND */
+
+    section 
+    {
+        /* APPARENCE */
+            display: flex;
+            justify-content: center;
+        /* APPARENCE */
+    }
+
+    a
+    {
+        /* TEXTE */
+            color: white;
+            font-weight: 50;
+            text-decoration: none;
+        /* TEXTE */
+    }
+/* GÉNÉRAL */
+
 
 /* ÉLÉMENTS DE L'EN-TÊTE */
     header
@@ -24,6 +75,36 @@
         /* APPARENCE */
     }
 
+    @keyframes slide 
+    {
+        100%
+        { 
+            left: 0; 
+        }
+    }
+
+    .banner
+    {
+        /* APPARENCE */
+            background-color: #ff6e8e42;
+            padding: 0.5em 0.5em;
+        /* APPARENCE */
+        
+        /* TEXTE */
+            font-family: 'Abril Fatface', cursive;
+            font-size: 50px;
+            text-align: center;
+        /* TEXTE */
+
+        /* ANIMATION */
+            transition: 1s;
+            animation: slide 0.5s left;
+        /* ANIMATION */
+    }
+/* ÉLÉMENTS DE L'EN-TÊTE */
+
+
+/* ÉLÉMENTS DE NAVIGATION */
     nav
     {
         /* APPARENCE */
@@ -39,7 +120,6 @@
     {
         /* TEXTE */
             font-size: xx-large;
-            font-weight: 50;
         /* TEXTE */
 
         /* DIMENSION */
@@ -47,57 +127,36 @@
         /* DIMENSION */
     }
 
-    .banner
+    .sidenav 
     {
         /* APPARENCE */
-            background-color: #ff6e8e42;
-            row-gap: 100px;
-            padding: 0.5em 0.5em;
+            display: grid;
+            position: fixed;
+            background: #8f2c42;
+            padding: 1%;
+            border-left: #df6d8f 1% solid;
         /* APPARENCE */
-        
-        /* TEXTE */
-            color: white;
-            font-family: 'Abril Fatface', cursive;
-            font-size: 50px;
-            text-align: center;
-        /* TEXTE */
+
+        /* DIMENSION */
+            width: 10%;
+            z-index: 1;
+        /* DIMENSION */
+
+        /* ANIMATION */
+            scroll-behavior: smooth;
+        /* ANIMATION */
     }
 
-    @keyframes fadeIn
+    .sidenav > a 
     {
-        0% 
-        {
-            opacity: 0;
-        }
-        100%
-        {
-            opacity: 1;
-        }
+        color: white;
+        font-size: x-large;
+        font-weight: 700;
+
+        margin: 2%;
+        padding: 2%;
     }
-/* ÉLÉMENTS DE L'EN-TÊTE */
-
-
-/* GÉNÉRAL */
-    section
-    {
-        /* APPARENCE */
-            display: flex;
-            justify-content: center;
-            position: relative;
-        /* APPARENCE */
-    }
-
-    a /* Pour les liens généraux */
-    {
-        /* TEXTE */
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-decoration: none;
-        /* TEXTE */
-
-        width: fit-content;
-    }
-/* GÉNÉRAL */
+/* ÉLÉMENTS DE NAVIGATION */
 
 
 /* ÉLÉMENTS AVEC ANIMATIONS */
@@ -128,7 +187,12 @@
 /* ÉLÉMENTS AVEC ANIMATIONS */
 
 
-/* ÉLÉMENTS DE BOÎTES (tailles par défaut sur index.html) */
+/* ÉLÉMENTS DE BOÎTES */
+    /* 
+        Les propriétés des contenants peuvent changer, dépendamment du
+        layout de la page actuelle.
+    */
+
     /* Section CONTACT */
 
         .contact > .container
@@ -136,17 +200,6 @@
             /* DIMENSION */
                 width: 60em;
             /* DIMENSION */
-        }
-
-        .container_subelement
-        {
-            /* APPARENCE */
-                display: flex;
-                width: fit-content;
-                height: fit-content;
-                position:sticky;
-                margin: 3%;
-            /* APPARENCE */
         }
     
         .container_subelement > p
@@ -169,15 +222,26 @@
         .projects > .container
         {
             /* DIMENSION */
-                width: 50em;
+                width: 30em;
             /* DIMENSION */
         }
     /* Section PROJECTS */
 
+    /* Section ART */
+        .art > .container
+        {
+            /* DIMENSION */
+                width: 50em;
+            /* DIMENSION */
+        }
+    /* Section ART */
+
     /* Section ABOUT */
         .about
         {
-            display: grid;
+            /* APPARENCE */
+                display: grid;
+            /* APPARENCE */
         }
 
         .about > .container
@@ -188,7 +252,7 @@
 
             /* APPARENCE */
                 background-color: #22222252;
-                margin-bottom: 10%;
+                margin-bottom: 7%;
                 padding: 3%;
             /* APPARENCE */
         }
@@ -206,13 +270,6 @@
                 width: 30em;
             /* DIMENSION */
         }
-
-        .home > .container > a
-        {
-            /* APPARENCE */
-                margin: 5%;
-            /* APPARENCE */
-        }
     /* Section HOME */
 
     /* Base */
@@ -220,7 +277,6 @@
         {
             /* APPARENCE */
                 display: flexbox;
-                margin: 2%;
             /* APPARENCE */
         }
 
@@ -232,20 +288,14 @@
             /* APPARENCE */
         }
 
-        .scroller
+        .container_subelement
         {
-            /* APPEARANCE */
-                justify-self: center;
-                margin-bottom: 10%;
-            /* APPEARANCE */
-
-            /* DIMENSION */
-                width: 17.45vw;
-            /* DIMENSION */
-
-            /* SCROLL */
-                scroll-behavior: smooth;
-            /* SCROLL */
+            /* APPARENCE */
+                display: flex;
+                width: fit-content;
+                height: fit-content;
+                margin: 3%;
+            /* APPARENCE */
         }
     /* Base */
     
@@ -270,7 +320,6 @@
         /* TEXTE */
             color: #EDAF97;
             text-shadow: 2px 1px 1px #da7750e5;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: x-large;
             font-weight: bold;
         /* TEXTE */
@@ -283,15 +332,9 @@
             width: 20vw;
             height: 3vh;
         /* APPARENCE */
-
-        /* TEXTE */
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: medium;
-        /* TEXTE */
     }
 
-    form > textarea
+    textarea
     {
         /* APPARENCE */
             background-color: #58585833;
@@ -303,9 +346,9 @@
         /* DIMENSION */
 
         /* TEXTE */
-        color: white;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: medium;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: medium;
         /* TEXTE */
     }
 
@@ -327,11 +370,11 @@
     h1
     {
        /* TEXTE */
-            color: #EDAF97;
+            color: #edaf97;
             text-shadow: 2px 1px 1px #da7750e5;
             font-family: Abril Flatface;
             font-size: xxx-large;
-            font-weight: bolder;
+            font-weight: 700;
             text-align: center;
             letter-spacing: 3px;
         /* TEXTE */
@@ -341,6 +384,18 @@
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         /* ANIMATION */
+    }
+
+    @keyframes fadeIn
+    {
+        0% 
+        {
+            opacity: 0;
+        }
+        100%
+        {
+            opacity: 1;
+        }
     }
 
     h2
@@ -357,58 +412,23 @@
 
     h3
     {
-        /* DIMENSION */
-            width: fit-content;
-        /* DIMENSION */
-
         /* TEXTE */
-        color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: x-large;
-            font-weight: bolder;
+            font-weight: 700;
             letter-spacing: 1px;
         /* TEXTE */
     }
 
     p
     {
-        /* TEXTE */
-            color: rgb(255, 244, 244);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: larger;
-            font-weight: lighter;
-            text-align: justify;
-        /* TEXTE */
-
         /* APPARENCE */
             border-left: solid #8f2c429d;
-            padding: 2%
+            padding: 2%;
         /* APPARENCE */
-    }
-
-    a
-    {
-        /* APPARENCE */
-            background-color: #8f2c41;
-            padding: 1%;
-        /* APPARENCE */
-
-        /* TEXTE */
-            font-size: x-large;
-            font-weight: bolder;
-        /* TEXTE */
     }
 
     li
     {
-        /* TEXTE */
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: larger;
-            font-weight: lighter;
-            text-align: justify;
-        /* TEXTE */
-
         /* APPARENCE */
             margin: 1%;
         /* APPARENCE */
@@ -427,10 +447,6 @@
         /* APPARENCE */
 
         /* TEXTE */
-            color: white;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: medium;
-            font-weight: lighter;
             text-align: center;
         /* TEXTE */
     }
@@ -450,14 +466,13 @@
         /* APPARENCE */
             display: flex;
             column-gap: 1em;
-            justify-content: center;
         /* APPARENCE */
     }
 
     .reseau > a
     {
         /* TEXTE */
-            font-size: large;
+            font-size: medium;
             font-weight: bold;
         /* TEXTE */
     }
