@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
-/**
+*
 { 
     outline: 1px solid red;
     outline-offset: -1px;
-}*/
+}
   
 /* FOND */
     body
@@ -19,9 +19,8 @@
     header
     {
         /* APPARENCE */
-            display: flex;
-            background-color: #8f2c41;
-            padding: 0.5%;
+            display: flexbox;
+            background-color: #8f2c42;
         /* APPARENCE */
     }
 
@@ -29,9 +28,11 @@
     {
         /* APPARENCE */
             display: flex;
-            margin-left: 15%;
-            column-gap: 10vh;
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 5vw;
         /* APPARENCE */
+
     }
 
     nav > a
@@ -40,6 +41,10 @@
             font-size: xx-large;
             font-weight: 50;
         /* TEXTE */
+
+        /* DIMENSION */
+            height: 5vh;
+        /* DIMENSION */
     }
 
     .banner
@@ -56,15 +61,6 @@
             font-size: 50px;
             text-align: center;
         /* TEXTE */
-    }
-
-    .main_title
-    {
-        /* ANIMATION */
-            animation: fadeIn 2s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-        /* ANIMATION */
     }
 
     @keyframes fadeIn
@@ -142,15 +138,7 @@
             /* DIMENSION */
         }
 
-        .sub_container
-        {
-            /* APPARENCE */
-                display: flex;
-                flex-direction: row;
-            /* APPARENCE */
-        }
-    
-        .sub_container_2
+        .container_subelement
         {
             /* APPARENCE */
                 display: flex;
@@ -161,13 +149,30 @@
             /* APPARENCE */
         }
     
-        .sub_container_2 > p
+        .container_subelement > p
         {
             /* APPARENCE */
                 border: none;
             /* APPARENCE */
         }
     /* Section CONTACT */
+
+    /* Section PROJECTS */
+        .projects > .container > p
+        {
+            /* APPARENCE */
+                padding: 2%;
+                margin: 3%;
+            /* APPARENCE */
+        }
+
+        .projects > .container
+        {
+            /* DIMENSION */
+                width: 50em;
+            /* DIMENSION */
+        }
+    /* Section PROJECTS */
 
     /* Section ABOUT */
         .about
@@ -183,37 +188,68 @@
 
             /* APPARENCE */
                 background-color: #22222252;
+                margin-bottom: 10%;
+                padding: 3%;
             /* APPARENCE */
         }
     /* Section ABOUT */
 
-    .container
-    {
-        /* APPARENCE */
-            display: flexbox;
-            margin: 1%;
-            padding: 2%;
-        /* APPARENCE */
+    /* Section HOME */
+        .home > .container
+        {
+            /* APPARENCE */
+                margin: 1%;
+                padding: 2%;
+            /* APPARENCE */
 
-        /* DIMENSION */
-            width: 30em;
-        /* DIMENSION */
-    }
+            /* DIMENSION */
+                width: 30em;
+            /* DIMENSION */
+        }
 
-    .container > a
-    {
-        /* APPARENCE */
-            background-color: #8f2c41;
-            padding: 1%;
-        /* APPARENCE */
+        .home > .container > a
+        {
+            /* APPARENCE */
+                margin: 5%;
+            /* APPARENCE */
+        }
+    /* Section HOME */
 
-        /* TEXTE */
-            font-size: x-large;
-            font-weight: bolder;
-        /* TEXTE */
-    }
+    /* Base */
+        .container
+        {
+            /* APPARENCE */
+                display: flexbox;
+                margin: 2%;
+            /* APPARENCE */
+        }
+
+        .container_element
+        {
+            /* APPARENCE */
+                display: flex;
+                flex-direction: row;
+            /* APPARENCE */
+        }
+
+        .scroller
+        {
+            /* APPEARANCE */
+                justify-self: center;
+                margin-bottom: 10%;
+            /* APPEARANCE */
+
+            /* DIMENSION */
+                width: 17.45vw;
+            /* DIMENSION */
+
+            /* SCROLL */
+                scroll-behavior: smooth;
+            /* SCROLL */
+        }
+    /* Base */
+    
 /* ÉLÉMENTS DE BOÎTES */
-
 
 /* STYLE DU FORMULAIRE */
     form
@@ -255,7 +291,7 @@
         /* TEXTE */
     }
 
-    textarea
+    form > textarea
     {
         /* APPARENCE */
             background-color: #58585833;
@@ -311,6 +347,7 @@
     {
         /* TEXTE */
             color: #df6d8f;
+            text-shadow: 2px 1px 1px #a14561d0;
             font-family: Abril Flatface;
             font-size: xx-large;
             text-align: center;
@@ -349,11 +386,17 @@
         /* APPARENCE */
     }
 
-    ul
+    a
     {
         /* APPARENCE */
-            margin: 5%;
+            background-color: #8f2c41;
+            padding: 1%;
         /* APPARENCE */
+
+        /* TEXTE */
+            font-size: x-large;
+            font-weight: bolder;
+        /* TEXTE */
     }
 
     li
@@ -370,6 +413,7 @@
             margin: 1%;
         /* APPARENCE */
     }
+    
 /* STYLES DE TEXTES (TITRES, ETC.) */
 
 
