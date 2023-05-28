@@ -149,12 +149,16 @@
 
     .sidenav > a 
     {
-        color: white;
-        font-size: x-large;
-        font-weight: 700;
+        /* TEXTE */
+            color: white;
+            font-size: x-large;
+            font-weight: 700;
+        /* TEXTE */
 
-        margin: 2%;
-        padding: 2%;
+        /* APPARENCE */
+            margin: 2%;
+            padding: 2%;
+        /* APPARENCE */
     }
 /* ÉLÉMENTS DE NAVIGATION */
 
