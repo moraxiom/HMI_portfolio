@@ -1,88 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
-*
+/**
 { 
     outline: 1px solid red;
     outline-offset: -1px;
-}
+}*/
   
 /* FOND */
-body
-{
-    background-color: #0e0e0e;
-}
+    body
+    {
+        /* APPARENCE */
+            background-color: #0e0e0e;
+        /* APPARENCE */
+    }
 /* FOND */
 
 /* ÉLÉMENTS DE L'EN-TÊTE */
-header
-{
-    display: flex;
-    background-color: #8f2c41;
-    padding: 0.5%;
-}
-
-nav
-{
-    display: flex;
-    margin-left: 15%;
-    column-gap: 10vh;
-}
-
-nav > a
-{
-    font-size: xx-large;
-    font-weight: 50;
-}
-
-.banner
-{
-    color: white;
-    background-color: #ff6e8e42;
-
-    row-gap: 100px;
-    padding: 0.5em 0.5em;
-    
-    font-family: 'Abril Fatface', cursive;
-    font-size: 50px;
-    text-align: center;
-}
-
-.main_title
-{
-    animation: fadeIn 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-@keyframes fadeIn
-{
-    0% 
+    header
     {
-        opacity: 0;
+        /* APPARENCE */
+            display: flex;
+            background-color: #8f2c41;
+            padding: 0.5%;
+        /* APPARENCE */
     }
-    100%
+
+    nav
     {
-        opacity: 1;
+        /* APPARENCE */
+            display: flex;
+            margin-left: 15%;
+            column-gap: 10vh;
+        /* APPARENCE */
     }
-}
+
+    nav > a
+    {
+        /* TEXTE */
+            font-size: xx-large;
+            font-weight: 50;
+        /* TEXTE */
+    }
+
+    .banner
+    {
+        /* APPARENCE */
+            background-color: #ff6e8e42;
+            row-gap: 100px;
+            padding: 0.5em 0.5em;
+        /* APPARENCE */
+        
+        /* TEXTE */
+            color: white;
+            font-family: 'Abril Fatface', cursive;
+            font-size: 50px;
+            text-align: center;
+        /* TEXTE */
+    }
+
+    .main_title
+    {
+        /* ANIMATION */
+            animation: fadeIn 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        /* ANIMATION */
+    }
+
+    @keyframes fadeIn
+    {
+        0% 
+        {
+            opacity: 0;
+        }
+        100%
+        {
+            opacity: 1;
+        }
+    }
 /* ÉLÉMENTS DE L'EN-TÊTE */
 
 
 /* GÉNÉRAL */
     section
     {
-        display: flex;
-
-        justify-content: center;
-        position: relative;
+        /* APPARENCE */
+            display: flex;
+            justify-content: center;
+            position: relative;
+        /* APPARENCE */
     }
 
     a /* Pour les liens généraux */
     {
-        color: white;
-        
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-decoration: none;
+        /* TEXTE */
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-decoration: none;
+        /* TEXTE */
 
         width: fit-content;
     }
@@ -92,19 +107,27 @@ nav > a
 /* ÉLÉMENTS AVEC ANIMATIONS */
     .clickable:hover
     {
-        color: #ff7d99;
-        background-color: unset;
+        /* APPARENCE */
+            color: #ff7d99;
+            background-color: unset;
+        /* APPARENCE */
     }
 
     .clickable
     {
-        display: flex;
-        width: fit-content;
+        /* APPARENCE */
+            display: flex;
+        /* APPARENCE */
 
-        animation: colorFade ease 1s;
-        animation-fill-mode: forwards;
+        /* DIMENSION */
+            width: fit-content;
+        /* DIMENSION */
 
-        transition: color 1s ease-out 100ms, background-color 1s ease-out;
+        /* ANIMATION */
+            animation: colorFade ease 1s;
+            animation-fill-mode: forwards;
+            transition: color 1s ease-out 100ms, background-color 1s ease-out;
+        /* ANIMATION */
     }
 /* ÉLÉMENTS AVEC ANIMATIONS */
 
@@ -114,50 +137,80 @@ nav > a
 
         .contact > .container
         {
-            width: 60em;
+            /* DIMENSION */
+                width: 60em;
+            /* DIMENSION */
         }
 
+        .sub_container
+        {
+            /* APPARENCE */
+                display: flex;
+                flex-direction: row;
+            /* APPARENCE */
+        }
+    
+        .sub_container_2
+        {
+            /* APPARENCE */
+                display: flex;
+                width: fit-content;
+                height: fit-content;
+                position:sticky;
+                margin: 3%;
+            /* APPARENCE */
+        }
+    
+        .sub_container_2 > p
+        {
+            /* APPARENCE */
+                border: none;
+            /* APPARENCE */
+        }
     /* Section CONTACT */
+
+    /* Section ABOUT */
+        .about
+        {
+            display: grid;
+        }
+
+        .about > .container
+        {
+            /* DIMENSION */
+                width: 50em;
+            /* DIMENSION */
+
+            /* APPARENCE */
+                background-color: #22222252;
+            /* APPARENCE */
+        }
+    /* Section ABOUT */
 
     .container
     {
-        display: flexbox;
-        margin: 1%;
-        padding: 2%;
+        /* APPARENCE */
+            display: flexbox;
+            margin: 1%;
+            padding: 2%;
+        /* APPARENCE */
 
-        width: 30em;
+        /* DIMENSION */
+            width: 30em;
+        /* DIMENSION */
     }
 
     .container > a
     {
-        background-color: #8f2c41;
-        padding: 1%;
+        /* APPARENCE */
+            background-color: #8f2c41;
+            padding: 1%;
+        /* APPARENCE */
 
-        font-size: x-large;
-        font-weight: bolder;
-    }
-
-    .container > img
-    {
-        animation: fadeIn 2s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-    }
-
-    .sub_container
-    {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .sub_container_2
-    {
-        display: flex;
-        width: fit-content;
-        height: fit-content;
-
-        position:sticky;
-        margin: 3%;
+        /* TEXTE */
+            font-size: x-large;
+            font-weight: bolder;
+        /* TEXTE */
     }
 /* ÉLÉMENTS DE BOÎTES */
 
@@ -237,57 +290,85 @@ nav > a
 /* STYLES DE TEXTES (TITRES, ETC.) */
     h1
     {
-        color: #EDAF97;
-        text-shadow: 2px 1px 1px #da7750e5;
+       /* TEXTE */
+            color: #EDAF97;
+            text-shadow: 2px 1px 1px #da7750e5;
+            font-family: Abril Flatface;
+            font-size: xxx-large;
+            font-weight: bolder;
+            text-align: center;
+            letter-spacing: 3px;
+        /* TEXTE */
 
-        width: fit-content;
+        /* ANIMATION */
+            animation: fadeIn 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        /* ANIMATION */
+    }
 
-        font-family: Abril Flatface;
-        font-size: xxx-large;
-        font-weight: bolder;
-        letter-spacing: 3px;
+    h2
+    {
+        /* TEXTE */
+            color: #df6d8f;
+            font-family: Abril Flatface;
+            font-size: xx-large;
+            text-align: center;
+            letter-spacing: 3px;
+        /* TEXTE */  
     }
 
     h3
     {
+        /* DIMENSION */
+            width: fit-content;
+        /* DIMENSION */
+
+        /* TEXTE */
         color: white;
-
-        width: fit-content;
-
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: x-large;
-        font-weight: bolder;
-        letter-spacing: 1px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: x-large;
+            font-weight: bolder;
+            letter-spacing: 1px;
+        /* TEXTE */
     }
 
     p
     {
-        color: white;
+        /* TEXTE */
+            color: rgb(255, 244, 244);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: larger;
+            font-weight: lighter;
+            text-align: justify;
+        /* TEXTE */
 
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: larger;
-        font-weight: lighter;
-
-        border-left: solid #8f2c429d;
-        text-align: justify;
-        padding: 3%
+        /* APPARENCE */
+            border-left: solid #8f2c429d;
+            padding: 2%
+        /* APPARENCE */
     }
 
     ul
     {
-        margin: 5%;
+        /* APPARENCE */
+            margin: 5%;
+        /* APPARENCE */
     }
 
     li
     {
-        color: white;
+        /* TEXTE */
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: larger;
+            font-weight: lighter;
+            text-align: justify;
+        /* TEXTE */
 
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 20px;
-        font-weight: lighter;
-
-        text-align: justify;
-        margin: 1%;
+        /* APPARENCE */
+            margin: 1%;
+        /* APPARENCE */
     }
 /* STYLES DE TEXTES (TITRES, ETC.) */
 
@@ -295,44 +376,53 @@ nav > a
 /* ÉLÉMENTS DE PIED DE PAGE */
     footer
     {
-        display: flexbox;
-        line-height: 1.5em;
+        /* APPARENCE */
+            display: flexbox;
+            background-color: #8f2c41;
+            line-height: 1.5em;
+        /* APPARENCE */
 
-        color: white;
-        background-color: #8f2c41;
-
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: medium;
-        font-weight: lighter;
-        text-align: center;
+        /* TEXTE */
+            color: white;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: medium;
+            font-weight: lighter;
+            text-align: center;
+        /* TEXTE */
     }
 
     .socialmedia
     {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-
-        column-gap: 5%;
+        /* APPARENCE */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 5%;
+        /* APPARENCE */
     }
 
     .reseau
     {
-        display: flex;
-
-        column-gap: 1em;
-        justify-content: center;
+        /* APPARENCE */
+            display: flex;
+            column-gap: 1em;
+            justify-content: center;
+        /* APPARENCE */
     }
 
     .reseau > a
     {
-        font-size: large;
-        font-weight: bold;
+        /* TEXTE */
+            font-size: large;
+            font-weight: bold;
+        /* TEXTE */
     }
 
     .reseau > img
     {
-        width: 1.4em;
-        height: 1.4em
+        /* DIMENSIONS */
+            width: 1.4em;
+            height: 1.4em
+        /* DIMENSIONS */
     }
 /* ÉLÉMENTS DE PIED DE PAGE */
