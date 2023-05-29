@@ -80,6 +80,15 @@
             text-decoration: none;
         /* TEXTE */
     }
+
+    .container > img
+        {
+            /* ANIMATION */
+            animation: fadeIn 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            /* ANIMATION */
+        }
 /* GÉNÉRAL */
 
 
@@ -90,14 +99,6 @@
             display: flexbox;
             background-color: #8f2c42;
         /* APPARENCE */
-    }
-
-    @keyframes slide 
-    {
-        100%
-        { 
-            left: 0; 
-        }
     }
 
     .banner
@@ -205,6 +206,26 @@
             transition: color 1s ease-out 100ms, background-color 1s ease-out;
         /* ANIMATION */
     }
+
+    @keyframes slide 
+    {
+        100%
+        { 
+            left: 0; 
+        }
+    }
+
+    @keyframes fadeIn
+    {
+        0% 
+        {
+            opacity: 0;
+        }
+        100%
+        {
+            opacity: 1;
+        }
+    }
 /* ÉLÉMENTS AVEC ANIMATIONS */
 
 
@@ -248,12 +269,19 @@
     /* Section PROJECTS */
 
     /* Section ART */
+        .art > .container > p
+        {
+            width: 35em;
+        }
+        
         .art > .container
         {
             /* APPARENCE */
                 display: flex;
-                column-gap: 4vw;
-                padding: 2%;
+                padding: 1%;
+                column-gap: 2vw;
+                margin-bottom: 2.5vh;
+                justify-content: center;
             /* APPARENCE */
 
             /* DIMENSION */
@@ -314,6 +342,7 @@
         /* DIMENSION */
 
         /* APPARENCE */
+            justify-self: center;
             border-style: none;
             margin: 3%;
         /* APPARENCE */
@@ -399,18 +428,6 @@
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         /* ANIMATION */
-    }
-
-    @keyframes fadeIn
-    {
-        0% 
-        {
-            opacity: 0;
-        }
-        100%
-        {
-            opacity: 1;
-        }
     }
 
     h2
