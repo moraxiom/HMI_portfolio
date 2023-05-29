@@ -11,7 +11,7 @@
 /* ORGANISATION
     Mon CSS est organisé de la sorte :
 
-        1. Éléments par défaut (GÉNÉRAL)
+        1. Éléments par défaut et sections (GÉNÉRAL)
         2. Éléments de l'en-tête
         3. Éléments de navigation
         4. Éléments animés
@@ -47,7 +47,7 @@
         /* TEXTE */
     }
 
-    section 
+    section /* Settings par défaut */
     {
         /* APPARENCE */
             display: flex;
@@ -55,11 +55,28 @@
         /* APPARENCE */
     }
 
+    /* Settings différents */
+        .about
+        {
+            /* APPARENCE */
+                display: grid;
+            /* APPARENCE */
+        }
+
+        .art
+        {
+            /* APPARENCE */
+                display: grid;
+            /* APPARENCE */
+        }
+    /* Settings différents */
+
     a
     {
         /* TEXTE */
             color: white;
-            font-weight: 50;
+            font-weight: 700;
+            font-size: xx-large;
             text-decoration: none;
         /* TEXTE */
     }
@@ -120,6 +137,7 @@
     {
         /* TEXTE */
             font-size: xx-large;
+            font-weight: lighter;
         /* TEXTE */
 
         /* DIMENSION */
@@ -152,12 +170,11 @@
         /* TEXTE */
             color: white;
             font-size: x-large;
-            font-weight: 700;
+            font-weight: lighter;
         /* TEXTE */
 
         /* APPARENCE */
             margin: 2%;
-            padding: 2%;
         /* APPARENCE */
     }
 /* ÉLÉMENTS DE NAVIGATION */
@@ -205,13 +222,6 @@
                 width: 60em;
             /* DIMENSION */
         }
-    
-        .container_subelement > p
-        {
-            /* APPARENCE */
-                border: none;
-            /* APPARENCE */
-        }
     /* Section CONTACT */
 
     /* Section PROJECTS */
@@ -225,8 +235,14 @@
 
         .projects > .container
         {
+            /* APPARENCE */
+                column-gap: 5%;
+                margin-bottom: 3%;
+                padding: 2%;
+            /* APPARENCE */
+
             /* DIMENSION */
-                width: 30em;
+                width: 40em;
             /* DIMENSION */
         }
     /* Section PROJECTS */
@@ -234,20 +250,19 @@
     /* Section ART */
         .art > .container
         {
+            /* APPARENCE */
+                display: flex;
+                column-gap: 4vw;
+                padding: 2%;
+            /* APPARENCE */
+
             /* DIMENSION */
                 width: 50em;
             /* DIMENSION */
         }
     /* Section ART */
-
+    
     /* Section ABOUT */
-        .about
-        {
-            /* APPARENCE */
-                display: grid;
-            /* APPARENCE */
-        }
-
         .about > .container
         {
             /* DIMENSION */
@@ -266,8 +281,8 @@
         .home > .container
         {
             /* APPARENCE */
-                margin: 1%;
-                padding: 2%;
+                margin: 2%;
+                padding: 1%;
             /* APPARENCE */
 
             /* DIMENSION */
@@ -280,25 +295,9 @@
         .container
         {
             /* APPARENCE */
-                display: flexbox;
-            /* APPARENCE */
-        }
-
-        .container_element
-        {
-            /* APPARENCE */
-                display: flex;
-                flex-direction: row;
-            /* APPARENCE */
-        }
-
-        .container_subelement
-        {
-            /* APPARENCE */
-                display: flex;
-                width: fit-content;
-                height: fit-content;
-                margin: 3%;
+                display: grid;
+                min-width: min-content;
+                height: max-content;
             /* APPARENCE */
         }
     /* Base */
@@ -316,6 +315,7 @@
 
         /* APPARENCE */
             border-style: none;
+            margin: 3%;
         /* APPARENCE */
     }
 
@@ -331,6 +331,11 @@
 
     input
     {
+        /* TEXTE */
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* TEXTE */
+
         /* APPARENCE */
             background-color: #58585833;
             width: 20vw;
@@ -358,12 +363,18 @@
 
     .submit_button
     {
+        /* APPARENCE */
+            margin: 5%;
+        /* APPARENCE */
+
         /* DIMENSION */
             width: 10vw;
+            height: 5vh;
         /* DIMENSION */
 
         /* TEXTE */
             font-weight: 700;
+            font-size: large;
             justify-self: center;
         /* TEXTE */
     }
@@ -419,6 +430,7 @@
         /* TEXTE */
             font-size: x-large;
             font-weight: 700;
+            margin-bottom: none;
             letter-spacing: 1px;
         /* TEXTE */
     }
@@ -451,6 +463,7 @@
         /* APPARENCE */
 
         /* TEXTE */
+            font-size: medium;
             text-align: center;
         /* TEXTE */
     }
