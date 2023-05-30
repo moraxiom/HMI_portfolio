@@ -2,9 +2,9 @@
 
 ## PIÈCE JOINTES
 Ce projet aura les pièces jointes ci-dessous
-  • Rapport de laboratoire
-  • Notes prises pour les analyses
+  * Analyse du design
+  * Wireframes
+  * Auto-évaluation
 
 ## EXTRA
-Ce portfolio web n'existe que pour ce cours de développement web, et il s'auto-détruira à la fin de la session.
-Bonne chance.
+Ce portfolio explosera d'ici la fin de session (oups)
